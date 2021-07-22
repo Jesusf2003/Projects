@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+      
+	<h:head>
+	<title>Index</title>
+		<h:outputStylesheet library="css" name="Styles.css"/>
+	</h:head>
+	<h:body>
+		<h:form id="formLogin">
+			<h:panelGrid columns="2">
+				<h:outputLabel value="Usuario: " styleClass="colorText"/>
+				<h:inputText id="txtUser" value="#{loginBean.user}"
+								required="true" requiredMessage="Usuario correcto"/>
+				
+				<h:outputLabel value="Contraseña: " styleClass="colorText"/>
+				<h:inputSecret id="txtPswd" value="#{loginBean.pswd}"
+								required="true" requiredMessage="Contraseña correcta"/>
+				
+				<h:commandButton value="Entrar" action="#{loginBean.ingresar}"/>
+			</h:panelGrid>
+		</h:form>
+	</h:body>
+</html>

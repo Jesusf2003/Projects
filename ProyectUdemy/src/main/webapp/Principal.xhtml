@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+	<h:head>
+		<title> Pantalla Principal</title>
+		<h:outputStylesheet library="css" name="Styles.css"/>
+	</h:head>
+	<h:body>
+		Bienvenido a la Pantalla Principal
+		
+		<h:dataTable id="tblEmpleados" var="empleado" value="#{principalController.empleados}"
+					headerClass="headerTable" rowClasses="rowTable rowTableLine">
+			<h:column>
+				<f:facet name="header">Nombre</f:facet>
+				<h:outputText value="#{empleado.nombre}"/>
+			</h:column>
+			
+			<h:column>
+				<f:facet name="header">Primer Apellido</f:facet>
+				<h:outputText value="#{empleado.primerApellido}"/>
+			</h:column>
+			
+			<h:column>
+				<f:facet name="header">Segundo Apellido</f:facet>
+				<h:outputText value="#{empleado.segundoApellido}"/>
+			</h:column>
+			
+			<h:column>
+				<f:facet name="header">Puesto</f:facet>
+				<h:outputText value="#{empleado.puesto}"/>
+			</h:column>
+			
+			<h:column>
+				<f:facet name="header">Estatus</f:facet>
+				<h:outputText value="HABILITADO" rendered="#{empleado.status}"/>
+				<h:outputText value="INHABILITADO" rendered="#{!empleado.status}"/>
+			</h:column>
+		</h:dataTable>
+	</h:body>
+</html>
