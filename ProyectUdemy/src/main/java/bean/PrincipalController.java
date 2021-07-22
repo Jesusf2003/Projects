@@ -12,6 +12,7 @@ import services.EmpleadoServices;
 @ManagedBean
 @ViewScoped
 public class PrincipalController {
+	
 	private List<Empleado> empleados;
 	private EmpleadoServices empleadoService = new EmpleadoServices();
 	
