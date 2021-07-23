@@ -15,9 +15,8 @@ public class SessionClosedController {
 		System.out.println("Cerrar sesión...");
 	}
 	
-	// Cierra la sesión del usuario y vuelve a la pantalla principal
 	public void cerrarSession() {
-		ExternalContext externalContext = FacesContext.getCurrentInstance().getExternalContext();
+		ExternalContext externalContext = F acesContext.getCurrentInstance().getExternalContext();
 		externalContext.invalidateSession();
 		
 		try {
