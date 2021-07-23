@@ -2,39 +2,43 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:p="http://primefaces.org/ui">
-      
-	<h:head>
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
 	<title>Index</title>
-<!-- 		<h:outputStylesheet library="css" name="Styles.css"/> -->
-		<meta name="viewport" content="width=device-width, user-scalable=no"></meta>
-	</h:head>
-	<h:body>
-		<div class="ui-fluid">
-			<h:form id="formLogin">
-				<p:growl id="growl"/>
-				<p:panel id="pnlLogin" header="Inicio de sesión" style="text-align: center">
-					
-					<p:graphicImage name="imgs/user.png" width="20%"/>
-					
-					<p:panelGrid id="pnlGridLogin"
-									columns="1" columnclasses="ui-g-12 ui-md-12,ui-g-12 ui-md-12"
-									layout="grid" styleClass="ui-panelgrid-blank ui-fluid">
-						<p:outputLabel value="Usuario: " styleClass="colorText" for="txtUser" style="float: left"/>
-						<p:inputText id="txtUser" value="#{loginBean.user}"
-										required="true" requiredMessage="Usuario es requerido"/>
-						
-						<p:outputLabel value="Contraseña: " styleClass="colorText" for="txtPswd" style="float: left"/>
-						<p:password id="txtPswd" value="#{loginBean.pswd}"
-										required="true" requiredMessage="Contraseña es requerida"/>
-						
-						<p:outputLabel/>
-						<p:commandButton value="Entrar" action="#{loginBean.ingresar}" update="pnlGridLogin, growl"/>
-					</p:panelGrid>
-				</p:panel>
-			</h:form>
-		</div>
-	</h:body>
+	<!-- 		<h:outputStylesheet library="css" name="Styles.css"/> -->
+	<meta name="viewport" content="width=device-width, user-scalable=no"></meta>
+</h:head>
+<h:body>
+	<div class="ui-fluid">
+		<h:form id="formLogin">
+			<p:growl id="growl" />
+			<p:panel id="pnlLogin" header="Inicio de sesión"
+				style="text-align: center">
+
+				<p:graphicImage name="imgs/user.png" width="20%" />
+
+				<p:panelGrid id="pnlGridLogin" columns="1"
+					columnclasses="ui-g-12 ui-md-12,ui-g-12 ui-md-12" layout="grid"
+					styleClass="ui-panelgrid-blank ui-fluid">
+					<p:outputLabel value="Usuario: " styleClass="colorText"
+						for="txtUser" style="float: left" />
+					<p:inputText id="txtUser" value="#{loginBean.user}" required="true"
+						requiredMessage="Usuario es requerido" />
+
+					<p:outputLabel value="Contraseña: " styleClass="colorText"
+						for="txtPswd" style="float: left" />
+					<p:password id="txtPswd" value="#{loginBean.pswd}" required="true"
+						requiredMessage="Contraseña es requerida" />
+
+					<p:outputLabel />
+					<p:commandButton value="Entrar" action="#{loginBean.ingresar}"
+						update="pnlGridLogin, growl" />
+				</p:panelGrid>
+			</p:panel>
+		</h:form>
+	</div>
+</h:body>
 </html>

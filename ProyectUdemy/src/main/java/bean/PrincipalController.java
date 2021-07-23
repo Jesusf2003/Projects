@@ -14,6 +14,7 @@ import services.EmpleadoServices;
 public class PrincipalController {
 	
 	private List<Empleado> empleados;
+	private List<Empleado> empleadosFiltrados;
 	private EmpleadoServices empleadoService = new EmpleadoServices();
 	
 	@PostConstruct
@@ -40,4 +41,13 @@ public class PrincipalController {
 	public void setEmpleadoService(EmpleadoServices empleadoService) {
 		this.empleadoService = empleadoService;
 	}
+
+	public List<Empleado> getEmpleadosFiltrados() {
+		return empleadosFiltrados;
+	}
+
+	public void setEmpleadosFiltrados(List<Empleado> empleadosFiltrados) {
+		this.empleadosFiltrados = empleadosFiltrados;
+	}
+	
 }

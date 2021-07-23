@@ -1,10 +1,10 @@
 /*Color del texto*/
-.colorText{
+.colorText {
 	color: green;
 }
 
 /*Color de la cabecera de la tabla*/
-.headerTable{
+.headerTable {
 	text-align: center;
 	background: none repeat scroll 0 0 #e5e5e5;
 	border-bottom: 1px solid #bbbbbb;
@@ -12,14 +12,14 @@
 }
 
 /*Color de las columnas de la tabla*/
-.rowTable{
+.rowTable {
 	text-align: center;
 	background: none repeat scroll 0 0 #f9f9f9;
 	border-top: 1px solid #bbbbbb;
 }
 
 /*Color de las celdas de la tabla*/
-.rowTableLine{
+.rowTableLine {
 	text-align: center;
 	background: none repeat scroll 0 0 #ffffff;
 	border-top: 1px solid #bbbbbb;
