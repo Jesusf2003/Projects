@@ -75,6 +75,10 @@ public class EmpleadosWS {
 			return Response.status(400).entity("No se ingresó información del empleado, favor de capturar sus datos.").build();
 		}
 		
+		if (empleado.getNumeroEmpleado() == null || empleado.getNumeroEmpleado().isEmpty()) {
+			return Response.status(400).entity("El número de empleado es requerido.").build();
+		}
+		
 		if (empleado.getNombre() == null || empleado.getNombre().isEmpty()) {
 			return Response.status(400).entity("El nombre es requerido.").build();
 		}
